@@ -7,7 +7,8 @@
     "start": "node --env-file-if-exists=.env server.js",
     "migrate": "node --env-file-if-exists=.env migrate.js",
     "test": "node --test test/preco.test.js",
-    "test:integration": "node --env-file-if-exists=.env --test test/produtos.integration.test.js"
+    "test:integration": "node --env-file-if-exists=.env --test test/produtos.integration.test.js",
+    "lint": "eslint ."
   },
   "keywords": [],
   "type": "module",
@@ -17,6 +18,9 @@
     "pg": "^8.23.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
     "supertest": "^7.3.2"
   }
 }
