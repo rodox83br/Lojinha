@@ -1,0 +1,28 @@
+{
+  "name": "aula17",
+  "version": "1.0.0",
+  "description": "API REST para consulta de produtos desenvolvida com **Node.js**, **Express** e **PostgreSQL**, estruturada como base para pipelines de Integração Contínua (CI) e Entrega Contínua (CD).",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "npm --prefix api start",
+    "start:frontend": "serve frontend -l 3000",
+    "cypress:run": "env -u ELECTRON_RUN_AS_NODE cypress run",
+    "cypress:open": "env -u ELECTRON_RUN_AS_NODE cypress open",
+    "test:e2e": "start-server-and-test start:backend http://localhost:3001/health start:frontend http://localhost:3000 cypress:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodox83br/Lojinha.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rodox83br/Lojinha/issues"
+  },
+  "homepage": "https://github.com/rodox83br/Lojinha#readme",
+  "devDependencies": {
+    "cypress": "^16.3.0",
+    "serve": "^14.2.8",
+    "start-server-and-test": "^3.0.13"
+  }
+}
